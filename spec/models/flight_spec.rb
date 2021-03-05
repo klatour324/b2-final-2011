@@ -26,11 +26,13 @@ RSpec.describe Flight, type: :model do
   describe "instance methods" do
     describe "#eighteen_and_older" do
       it "returns passengers who are the age of 18 years old or older" do
-        expect(flight.passengers.eighteen_and_older).to eq([@passenger_1, @passenger_2, @passenger_4])
+        expect(@flight_1.eighteen_and_older).to eq([@passenger_1, @passenger_2, @passenger_4])
+      end
     end
+
     describe "#average_age_of_adult_passengers" do
       it "can find average age for adult passengers" do
-        expect(flight.average_age_of_adult_passengers).to eq(26.33)
+        expect(@flight_1.average_age_of_adult_passengers).to eq(26.33)
       end
     end
   end
