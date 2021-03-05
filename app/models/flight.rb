@@ -5,4 +5,8 @@ class Flight < ApplicationRecord
   def self.order_by_departure
     order(departure_city: :asc)
   end
+
+  def average_age_of_adult_passengers
+    passengers.select(:age).average(:age)
+  end
 end
