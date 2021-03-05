@@ -5,9 +5,10 @@
   <h2>Depature City: <%= @flight.departure_city %></h2><hr>
   <h2>Arrival City: <%= @flight.arrival_city %></h2><hr>
   <ul>
-  <% @flight.passengers.eighteen_and_older.each do |passenger| %>
+  <% @flight.eighteen_and_older.each do |passenger| %>
     <li><%= passenger.name %></li>
+    <%= button_to "Remove Passenger", "/flights/#{@flight.id}/passengers/#{passenger.id}", method: :delete %>
   <% end %>
-  <h2>Average Age of Adult Passengers:<%= @flight.average_age_of_adult_passengers %></h2>
   </ul>
+  <h2>Average Age of Adult Passengers: <%= @flight.average_age_of_adult_passengers.round(2) %></h2>
 </section>
