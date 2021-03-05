@@ -34,8 +34,3 @@ RSpec.describe "Flights Index Page" do
     end
   end
 end
-
-
-  # When I visit the flights index page
-  # I see each flight in the system including its number, departure city, and arrival city
-  # And I see that flights are listed in alphabetical order by departure city (A - Z)
