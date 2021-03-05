@@ -6,7 +6,11 @@ class Flight < ApplicationRecord
     order(departure_city: :asc)
   end
 
+  def eighteen_and_older
+    passengers.where('age >= ?', 18)
+  end
+
   def average_age_of_adult_passengers
-    passengers.select(:age).average(:age)
+    eighteen_and_older.average(:age)
   end
 end
