@@ -13,11 +13,11 @@ RSpec.describe Passenger, type: :model do
     it { should have_many(:flights).through(:flight_passengers)}
   end
 
-  describe "class methods" do
-    describe "::eighteen_and_older" do
-      it "returns passengers who are the age of 18 years old or older" do
-        expect(Passenger.eighteen_and_older).to eq([@passenger_1, @passenger_2, @passenger_4])
-      end
-    end
-  end
+  # describe "class methods" do
+  #   describe "::eighteen_and_older" do
+  #     it "returns passengers who are the age of 18 years old or older" do
+  #       expect(Passenger.eighteen_and_older).to eq([@passenger_1, @passenger_2, @passenger_4])
+  #     end
+  #   end
+  # end
 end
