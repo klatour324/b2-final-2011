@@ -5,7 +5,7 @@ class FlightsController < ApplicationController
 
   def show
     @flight = Flight.find(params[:id])
-    @flight.passengers.eighteen_and_older
-    @flight.average_age_of_adult_passengers
+    # @flight.passengers.eighteen_and_older
+    # @flight.passengers.average_age_of_adult_passengers
   end
 end
